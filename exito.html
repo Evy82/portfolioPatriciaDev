@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+ header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background: #fff;
+    box-shadow: 0 4px 25px -22px #000;
+    z-index: 2;
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo h1{
+    color:#000;
+}
+
+.logo h1 span {
+    color: #F34128;
+}
+
+.menu {
+    height: 80px;
+}
+
+.menu nav {
+    height: 100%;
+}
+
+.menu nav ul{
+    height: 100%;
+    display: flex;
+    list-style: none;
+
+}
+
+.menu nav ul li{
+    height: 100%;
+    margin: 0px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+}
+
+.menu-selected::before{
+    content: '';
+    width: 100%;
+    height: 4px;
+    background: #F34128;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.menu nav ul li a {
+    color: #777777;
+    transition: color 300ms;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.menu nav ul li a:hover {
+    color: #F34128;
+}
+
+
+
+.menu .text-menu-selected {
+    color: #F34128;
+
+}
+
+.mensaje {
+    padding-top: 200px;
+    margin: 50px;
+}
+
+    </style>
+
+</head>
+<body>
+    <header>
+        <div class="header-content">
+
+            <div class="logo">
+                <h1>Patricia<span>Dev</span></h1>
+            </div>
+
+            <div class="menu">
+                 
+            <nav>
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#acerca-de-mi">Acerca de mí</a></li>
+                    <li><a href="#proyectos">Proyectos</a></li>
+                    <li><a href="#habilidades">Habilidades</a></li>
+                    <li class="menu-selected"><a href="#contacto" class="text-menu-selected">Contacto</a></li>
+                    
+                </ul>
+            </nav>  
+
+            </div>
+
+        </div>
+    </header>
+    <div class="mensaje">
+       <h1>
+        Gracias por su mensaje. Le responderemos a la brevedad!
+       </h1> 
+    </div>
+    
+
+    <script>
+        setTimeout(function(){
+            window.location.replace("index.html");
+        },2000);
+    </script>
+</body>
+</html>
